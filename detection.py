@@ -17,7 +17,7 @@ def ball_detection(frame, upper_range, lower_range, image_width=600):
   center = None
 
   # resize the frame, blur it, and convert it to the HSV color space
-  frame = imutils.resize(frame[1], width=image_width)
+  frame = imutils.resize(frame, width=image_width)
   blurred = cv2.GaussianBlur(frame, (11, 11), 0)
   hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 
